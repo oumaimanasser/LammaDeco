@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location de salle pour votre événement</title>
+    <style>
+        .drop-zone {
+            width: 80%;
+            height: 400px;
+            border: 2px dashed #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .draggable {
+            width: 150px;
+            cursor: grab;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="images/log.png" alt="Logo" style="height: 30px;"> <!-- Ajustez la hauteur du logo si nécessaire -->
+            <a href="#">Accueil</a>
+            <a href="uihtml.html">packs</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <h1> Décorez votre salle </h1>
+        
+        <div>
+            <input type="text" placeholder="Rechercher une salle...">
+            <button type="submit">Rechercher</button>
+        </div>
+        
+        <div class="drop-zone" id="dropZone">
+            Déposez ici les éléments sélectionnées
+        </div>
+
+        <div>
+            <img src="images/tabfl.jpg" alt="fleur" class="draggable" draggable="true">
+            <img src="images/bougie.webp" alt="bougie" class="draggable" draggable="true">
+            <img src="images/balon.jpg" alt="balon" class="draggable" draggable="true">
+            <img src="images/fleur.jpg" alt="table" class="draggable" draggable="true">
+
+        </div>
+
+        <div>
+            <button>⬅ Précédent</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Suivant ➡</button>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h4>Information</h4>
+            <p>Qui nous sommes ? | Avis client | Type d'événements | Livraison | Réduction | Paiement</p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>lamaDeco@gmail.com</p>
+            <p>+216 64 793 993</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const draggables = document.querySelectorAll(".draggable");
+            const dropZone = document.getElementById("dropZone");
+
+            draggables.forEach(draggable => {
+                draggable.addEventListener("dragstart", function(event) {
+                    event.dataTransfer.setData("text/plain", event.target.outerHTML);
+                });
+            });
+
+            dropZone.addEventListener("dragover", function(event) {
+                event.preventDefault();
+            });
+
+            dropZone.addEventListener("drop", function(event) {
+                event.preventDefault();
+                const data = event.dataTransfer.getData("text/plain");
+                dropZone.innerHTML += data;
+            });
+        });
+    </script>
+</body>
+</html>

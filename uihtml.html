@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="images/log.png" alt="Logo" style="height: 30px;"> <!-- Ajustez la hauteur du logo si nécessaire -->
+            <a href="#">Accueil</a>
+            <a href="uihtml.html">packs</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Les événements</h1>
+        <input type="text" placeholder="Rechercher des événements">
+        
+        <section>
+            <article>
+                <a href="int2.html">
+                    <img src="images/wedsalle.jpg" alt="Salle couverte">
+                </a>
+                <h2>Salle couverte</h2>
+                <p>1000DT</p>
+                <p>Un espace fermé idéal pour vos événements.</p>
+                <button onclick="openMap('Salle couverte')">Voir la carte</button>
+            </article>
+            
+            <article>
+                <a href="int2.html">
+                    <img src="images/mariageplain.jpg" alt="Espace ouvert">
+                </a>
+                <h2>Espace ouvert</h2>
+                <p>1000DT</p>
+                <p>Un jardin magnifique pour des événements en plein air.</p>
+                <button onclick="openMap('Garden Party')">Voir la carte</button>
+            </article>
+            
+            <article>
+                <a href="int2.html">
+                    <img src="images/burth.jpg" alt="Café anniversaire">
+                </a>
+                <h2>Café anniversaire</h2>
+                <p>200DT</p>
+                <p>Un anniversaire magnifique dans un café.</p>
+                <button onclick="openMap('Café anniversaire')">Voir la carte</button>
+            </article>
+        </section>
+    </main>
+    
+    <section id="map-section"></section>
+    
+    <section>
+        <textarea placeholder="Ajouter votre commentaire"></textarea>
+        <button>Commenter</button>
+    </section>
+    
+    <footer>
+        <p>Qui nous sommes | Avis client | Type événements | Localisation | Paiement</p>
+        <p>Contact: lamaDeco@gmail.com</p>
+        <p>Suivez-nous: +216 64 793 993</p>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        function openMap(eventName) {
+            let mapLocations = {
+                "Salle couverte": [36.8065, 10.1815],
+                "Garden Party": [36.8075, 10.1795],
+                "Café anniversaire": [36.8080, 10.1800]
+            };
+            
+            let mapSection = document.getElementById("map-section");
+            mapSection.innerHTML = '<div id="map" style="height: 300px;"></div>';
+            
+            if (mapLocations[eventName]) {
+                let map = L.map("map").setView(mapLocations[eventName], 15);
+                L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                    attribution: "© OpenStreetMap contributors"
+                }).addTo(map);
+                
+                L.marker(mapLocations[eventName]).addTo(map)
+                    .bindPopup(eventName)
+                    .openPopup();
+            }
+        }
+    </script>
+</body>
+</html>
