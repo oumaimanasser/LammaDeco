@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location de salle</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-customPink">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0 gap-x-20"> <!-- Utilisation de gap-x-4 -->
+            <img src="./images/log.png" alt="Logo" class="h-8">
+            <a href="#" class="text-gray-700 ">Accueil</a>
+            <a href="index.html" class="text-gray-700 ">A propos</a>
+            <a href="#" class="text-gray-700 ">Contact</a>
+        </div>
+        <ul class="flex space-x-2">
+            <li><img src="./images/profil.png" alt="profile" class="h-4"></li>
+            <li><img src="./images/achat.png" alt="panier" class="h-4"></li>
+            <li><img src="./images/like.png" alt="favoris" class="h-4"></li>
+        </ul>
+    </nav>
+
+    <!-- Titre et Barre de recherche -->
+    <div class="text-center mt-10">
+        <h1 class="text-4xl font-bold text-gray-800">Location de salle pour votre événement</h1>
+        <div class="mt-4 flex justify-center">
+            <input type="text" placeholder="Saisir recherche" class="px-4 py-2 w-96 border rounded-full bg-gray-100 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+    </div>
+
+    <!-- Grille de salles -->
+    <div class="grid grid-cols-3 gap-6 p-8">
+        <!-- Salle 1 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <a href="int3.html">
+                <img src="images/zahra.PNG" alt="Salle Razan" class="w-full h-48 object-cover">
+            </a>
+            <div class="p-3">
+                <h3 class="font-bold text-lg">SALLE zahra</h3>
+                <div class="flex space-x-1 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="mt-4 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-users text-gray-600"></i>
+                        <span>80-100</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chair text-gray-600"></i>
+                        <span>150</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-utensils text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-volume-up text-gray-600"></i>
+                        <span>Non</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salle 2 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <a href="int3.html">
+                <img src="images/razan.jpg" alt="Salle waed" class="w-full h-48 object-cover">
+            </a>
+            <div class="p-3">
+                <h3 class="font-bold text-lg">SALLE Razan</h3>
+                <div class="flex space-x-1 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="mt-4 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-users text-gray-600"></i>
+                        <span>4</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chair text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-utensils text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-volume-up text-gray-600"></i>
+                        <span>Non</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salle 3 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <a href="int3.html">
+                <img src="images/moon.PNG" alt="Salle burth" class="w-full h-48 object-cover">
+            </a>
+            <div class="p-4">
+                <h3 class="font-bold text-lg">SALLE moon</h3>
+                <div class="flex space-x-1 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="mt-4 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-users text-gray-600"></i>
+                        <span>15-25</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chair text-gray-600"></i>
+                        <span>25</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-utensils text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-volume-up text-gray-600"></i>
+                        <span>oui</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salle 4 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <a href="int3.html">
+                <img src="images/viva.PNG" alt="Salle waed" class="w-full h-48 object-cover">
+            </a>
+            <div class="p-3">
+                <h3 class="font-bold text-lg">SALLE viva</h3>
+                <div class="flex space-x-1 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="mt-4 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-users text-gray-600"></i>
+                        <span>4</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chair text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-utensils text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-volume-up text-gray-600"></i>
+                        <span>Non</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salle 5 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <a href="int3.html">
+                <img src="images/luxe.PNG" alt="deco annif" class="w-full h-48 object-cover">
+            </a>
+            <div class="p-3">
+                <h3 class="font-bold text-lg">SALLE luxe</h3>
+                <div class="flex space-x-1 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="mt-4 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-users text-gray-600"></i>
+                        <span>40-80</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chair text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-utensils text-gray-600"></i>
+                        <span>10</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-volume-up text-gray-600"></i>
+                        <span>Non</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salle 6 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <a href="int3.html">
+                <img src="images/lean.PNG" alt="deco annif" class="w-full h-48 object-cover">
+            </a>
+            <div class="p-3">
+                <h3 class="font-bold text-lg">SALLE ELAN</h3>
+                <div class="flex space-x-1 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="mt-4 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-users text-gray-600"></i>
+                        <span>40-80</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-chair text-gray-600"></i>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-utensils text-gray-600"></i>
+                        <span>10</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-volume-up text-gray-600"></i>
+                        <span>Non</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center space-x-4 my-8">
+        <button class=" text-black px-4 py-2 "><</button>
+        <button class="bg-white text-black px-4 py-2rounded-md">1</button>
+        <button class="bg-white text-black px-4 py-2 rounded-md">2</button>
+        <button class="bg-white text-black px-4 py-2 rounded-md">3</button>
+        <button class=" text-black px-4 py-2 ">></button>
+    </div>
+    <div class="flex justify-around mt-8 w-full">
+        <a href="int2.html">
+        <button class="  bg-custom text-white p-2 mb-4 rounded-md hover:bg-pink-600">❮ Précédent</button></a>
+        <a href="int3.html">
+        <button class="bg-custom text-white mb-4 p-2 rounded-md hover:bg-pink-600">Suivant ❯</button>
+    </a>
+    </div>
+       
+    </div>
+    <!-- Footer -->
+    <footer class="bg-custom mt-16 py-10 text-center text-gray-700">
+        <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
+            <div>
+                <h3 class="font-semibold">Information</h3>
+                <p>Qui nous sommes?</p>
+                <p>Avis client</p>
+                <p>Type d'événements</p>
+                <p>Livraison</p>
+                <p>Réduction</p>
+                <p>Paiement</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Contact</h3>
+                <p>lamaDeco@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Suivez-nous</h3>
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📸</a> <!-- Instagram -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📱</a> <!-- WhatsApp -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">👤</a> <!-- Facebook -->
+                </div>
+                <p class="mt-2">📞 +216 64 793 993</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

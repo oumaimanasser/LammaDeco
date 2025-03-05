@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="bg-customPink">
+    
+    <!-- Navbar Responsive -->
+    <nav class="shadow-md p-4 md:p-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0 gap-x-4 md:gap-x-20">
+            <img src="./images/log.png" alt="Logo" class="h-8">
+            <a href="#" class="text-gray-700">Accueil</a>
+            <a href="index.html" class="text-gray-700 ">A propos</a>
+            <a href="#" class="text-gray-700 ">Contact</a>
+        </div>
+        <ul class="flex space-x-2">
+            <li><img src="./images/profil.png" alt="profile" class="h-4"></li>
+            <li><img src="./images/achat.png" alt="panier" class="h-4"></li>
+            <li><img src="./images/like.png" alt="favoris" class="h-4"></li>
+        </ul>
+    </nav>
+
+    <!-- Titre + Recherche Responsive -->
+    <div class="text-center mt-10 px-2">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Les événements</h1>
+        <div class="mt-4 flex justify-center">
+            <input type="text" placeholder="Chercher un événement" class="px-4 py-2 w-full md:w-96 border rounded-full bg-gray-100 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+        </div>
+    </div>
+
+    <!-- Cartes avec boutons de navigation Responsive -->
+    <div class="flex items-center justify-center mt-10 px-4 md:px-8">
+        <!-- Bouton Précédent -->
+        <button class="text-black px-4 py-2 rounded-full hover:bg-custom"><</button>
+
+        <!-- Grille de cartes Responsive -->
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-3 flex-1">
+            <!-- Carte 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden relative">
+                <a href="int2.html">
+                    <img src="./images/ima1.PNG" alt="Salle Couverte" class="w-full h-48 object-cover">
+                </a>
+                <div class="absolute top-32 p-1 border border-green-400 rounded-md bg-pink-100" style="width: 200px;">
+                    <h2 class="font-bold text-lg text-black">salle couverte</h2>
+                    <p class="text-gray-600">Cléopatre</p>
+                </div>
+                <p class="text-center text-lg font-semibold my-2">1500dnr</p>
+                <div class="p-4 border-t">
+                    <p>Superficie : 20m x 15m (300 m²)</p>
+                    <p>Capacité : 200 personnes</p>
+                    <p>Tables : 40 tables (5 personnes/table)</p>
+                    <p>Chaises : 200 chaises</p>
+                </div>
+                <div class="flex justify-end my-10">
+                    <img src="./images/lieu.PNG" alt="Logo" class="h-6">
+                </div>
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden relative">
+                <a href="int2.html">
+                    <img src="./images/ima2.PNG" alt="En Plain Air" class="w-full h-48 object-cover">
+                </a>
+                <div class="absolute top-32 p-1 border border-green-400 rounded-md bg-pink-100" style="width: 200px;">
+                    <h2 class="font-bold text-lg text-black">en plain air</h2>
+                    <p class="text-gray-600">Espace El Bouraka</p>
+                </div>
+                <p class="text-center text-lg font-semibold my-2">1500dnr</p>
+                <div class="p-4 border-t">
+                    <p>Superficie : 15m x 10m (150 m²)</p>
+                    <p>Capacité : 100 personnes</p>
+                    <p>Tables : 20 tables (5 personnes/table)</p>
+                    <p>Chaises : 100 chaises</p>
+                </div>
+                <div class="flex justify-end my-10">
+                    <img src="./images/lieu.PNG" alt="Logo" class="h-6">
+                </div>
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden relative">
+                <a href="int2.html">
+                    <img src="./images/ima3.PNG" alt="Salle Couverte" class="w-full h-48 object-cover">
+                </a>
+                <div class="absolute top-32 p-1 border border-green-400 rounded-md bg-pink-100" style="width: 200px;">
+                    <h2 class="font-bold text-lg text-black">salle couverte</h2>
+                    <p class="text-gray-600">Café DOWNTOWN</p>
+                </div>
+                <p class="text-center text-lg font-semibold my-2">1500dnr</p>
+                <div class="p-4 border-t">
+                    <p>Superficie : 10m x 8m (80 m²)</p>
+                    <p>Capacité : 50 personnes</p>
+                    <p>Tables : 10 tables (5 personnes/table)</p>
+                    <p>Chaises : 50 chaises</p>
+                </div>
+                <div class="flex justify-end my-10">
+                    <img src="./images/lieu.PNG" alt="Logo" class="h-6">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton Suivant -->
+        <button class="text-black px-4 py-2 rounded-full hover:bg-custom">></button>
+    </div>
+
+    <!-- Section Carte Google Maps Responsive -->
+    <div class="mt-10 px-4 md:px-10">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Localisation</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615674389!3d48.858370079287475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1633023222539!5m2!1sfr!2sfr"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            class="rounded-lg shadow-md"
+        ></iframe>
+    </div>
+
+    <!-- Section Commentaires Responsive -->
+    <div class="mt-10 px-4 md:px-10">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Commentaires</h2>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <textarea
+                class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                placeholder="Entrez votre commentaire ici..."
+                rows="4"
+            ></textarea>
+            <div class="text-right">
+                <button class="mt-4 bg-custom text-white px-6 py-2 rounded-lg">
+                    Envoyer
+                </button>
+            </div>
+            
+                    </div>
+    </div>
+
+    <!-- Boutons Précédent et Suivant Responsive -->
+    <div class="flex justify-around mt-8 w-full">
+        <button class="bg-custom text-white p-2 rounded-md ">❮ Précédent</button>
+        <a href="int2.html">
+            <button class="bg-custom text-white p-2 rounded-md ">Suivant ❯</button>
+        </a>
+    </div>
+    
+
+    <!-- Footer Responsive -->
+    <footer class="bg-custom mt-16 py-10 text-center text-gray-700">
+        <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
+            <div>
+                <h3 class="font-semibold">Information</h3>
+                <p>Qui nous sommes?</p>
+                <p>Avis client</p>
+                <p>Type d'événements</p>
+                <p>Livraison</p>
+                <p>Réduction</p>
+                <p>Paiement</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Contact</h3>
+                <p>lamaDeco@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Suivez-nous</h3>
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📸</a> <!-- Instagram -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📱</a> <!-- WhatsApp -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">👤</a> <!-- Facebook -->
+                </div>
+                <p class="mt-2">📞 +216 64 793 993</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
