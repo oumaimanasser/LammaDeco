@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographie de Mariage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles personnalisés pour les boutons */
+        .custom-button {
+            background-color: #FCB3AD;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            margin: 0 20px;
+        }
+
+        .custom-button:hover {
+            background-color: #fca4a0;
+        }
+
+        /* Styles pour la grille de catalogues */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .catalog-item {
+            text-align: center;
+        }
+
+        .catalog-item img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .catalog-item-title {
+            margin-top: 10px;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Styles pour les boutons de navigation */
+        .navigation-container {
+            position: relative;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .nav-button {
+            background-color: #FCB3AD;
+            color: black;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-button:hover {
+            background-color: #fca4a0;
+            transform: scale(1.05);
+        }
+
+        .nav-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-cream font-inter">
+    <!-- En-tête -->
+    <header class="flex justify-between items-center px-4 sm:px-6 md:px-10 py-4">
+        <!-- Espace vide à gauche -->
+        <div class="text-gray-400 text-sm hidden md:block"></div>
+
+        <!-- Logo et navigation -->
+        <div class="flex items-center gap-4 sm:gap-6 md:gap-10">
+            <div class="logo flex items-center">
+                <img src="/images/logo.png" alt="Logo" class="w-10 h-10 md:w-15 md:h-15 rounded-full mr-2">
+            </div>
+            <nav class="hidden sm:block">
+                <ul class="flex gap-4 md:gap-8">
+                    <li><a href="#" class="text-black font-medium">Accueil</a></li>
+                    <li><a href="#" class="text-black font-medium">À propos</a></li>
+                    <li><a href="#" class="text-black font-medium">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="block sm:hidden text-black">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Icônes à droite -->
+        <div class="text-gray-400 text-sm hidden md:block">
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-black"><i class="far fa-clock"></i></a>
+                <a href="#" class="text-black"><i class="far fa-thumbs-up"></i></a>
+                <a href="#" class="text-black"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section de recherche -->
+    <section class="search-section max-w-xl mx-auto mt-8 px-4 sm:px-6">
+        <div class="bg-searchBg px-4 py-3 rounded-full flex items-center">
+            <i class="fas fa-bars"></i>
+            <input type="text" placeholder="Hinted search text" class="bg-transparent border-none outline-none w-full pl-2 text-gray-600">
+            <div class="text-gray-600">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 md:px-5 py-5">
+        <section class="catalog-section">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-5 gap-3">
+                <h2 class="font-semibold text-xl sm:text-2xl">Catalogue 1</h2>
+            </div>
+
+            <!-- Grille des catalogues -->
+            <div class="catalog-grid">
+                <!-- Catalogue 1 -->
+                <article class="catalog-item">
+                    <img src="/images/fleurs.jpg" alt="Fleurs">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Fleurs
+                    </div>
+                </article>
+            
+                <!-- Catalogue 2 -->
+                <article class="catalog-item">
+                    <img src="/images/bougies.jpg" alt="Bougies">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Bougies
+                    </div>
+                </article>
+            
+                <!-- Catalogue 3 -->
+                <article class="catalog-item">
+                    <img src="/images/ballons.jpg" alt="Ballons">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Ballons
+                    </div>
+                </article>
+            
+                <!-- Catalogue 4 -->
+                <article class="catalog-item">
+                    <img src="/images/bouquet.jpg" alt="Bouquet de fleurs">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Bouquet de fleurs
+                    </div>
+                </article>
+            
+                <!-- Catalogue 5 -->
+                <article class="catalog-item">
+                    <img src="/images/arche.jpg" alt="Arche de mariage">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Arche de mariage
+                    </div>
+                </article>
+            
+                <!-- Catalogue 6 -->
+                <article class="catalog-item">
+                    <img src="/images/invitation.jpg" alt="Invitation">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Invitation
+                    </div>
+                </article>
+            
+                <!-- Catalogue 7 -->
+                <article class="catalog-item">
+                    <img src="/images/sets.jpg" alt="Set de table">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Set de table
+                    </div>
+                </article>
+            
+                <!-- Catalogue 8 -->
+                <article class="catalog-item">
+                    <img src="/images/chaise.jpg" alt="Chaise">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Chaise
+                    </div>
+                </article>
+            
+                <!-- Catalogue 9 -->
+                <article class="catalog-item">
+                    <img src="/images/tables.jpg" alt="Tables">
+                    <div class="catalog-item-title">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                        Tables
+                    </div>
+                </article>
+            </div>
+
+            <!-- Conteneur de navigation -->
+            <div class="navigation-container">
+                <div class="navigation-buttons">
+                    <button id="prev-button" class="nav-button" disabled>
+                        Précédent
+                    </button>
+                    <button id="next-button" class="nav-button">
+                        Suivant 
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-peach px-4 sm:px-6 md:px-10 py-5 mt-8">
+        <div class="flex flex-col md:flex-row justify-between gap-6">
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">Information</h3>
+                <nav>
+                    <ul>
+                        <li class="my-1 text-sm">Qui sommes nous?</li>
+                        <li class="my-1 text-sm">Avis client</li>
+                        <li class="my-1 text-sm">Type d'événements </li>
+                        <li class="my-1 text-sm">Livraison</li>
+                        <li class="my-1 text-sm">Réduction</li>
+                        <li class="my-1 text-sm">Paiement</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">Contact</h3>
+                
+                <div></div>
+                <h3 class="mb-2 mt-2 font-semibold">Suivez-nous</h3>
+                <div class="social-icons flex mt-2">
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </section>
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">lamaDeco@gmail.com</h3>
+                <address class="not-italic">
+                    <p class="my-1 text-sm">+216 64 793 993</p>
+                </address>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Font Awesome pour les icônes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <script>
+        // Toggle mobile menu
+        document.querySelector('button.block.sm\\:hidden').addEventListener('click', function() {
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'fixed inset-0 bg-white z-50 flex flex-col items-center justify-center';
+            mobileMenu.innerHTML = `
+                <button class="absolute top-4 right-4 text-black text-xl">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav>
+                    <ul class="flex flex-col gap-6 text-center">
+                        <li><a href="#" class="text-black font-medium text-xl">Accueil</a></li>
+                        <li><a href="#" class="text-black font-medium text-xl">À propos</a></li>
+                        <li><a href="#" class="text-black font-medium text-xl">Contact</a></li>
+                    </ul>
+                </nav>
+            `;
+            document.body.appendChild(mobileMenu);
+            document.body.style.overflow = 'hidden';
+            
+            mobileMenu.querySelector('button').addEventListener('click', function() {
+                document.body.removeChild(mobileMenu);
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Gestion des boutons de navigation
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        let currentPage = 0;
+
+        nextButton.addEventListener('click', () => {
+            currentPage++;
+            updateNavigation();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentPage--;
+            updateNavigation();
+        });
+
+        function updateNavigation() {
+            // Pour l'instant, simulation simple (à adapter selon votre logique)
+            prevButton.disabled = currentPage === 0;
+            nextButton.disabled = currentPage === 2; // Supposant 3 pages (0, 1, 2)
+        }
+
+        // Initialisation
+        updateNavigation();
+    </script>
+</body>
+</html>
