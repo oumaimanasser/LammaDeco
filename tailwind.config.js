@@ -1,13 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./public/**/*.{html,js}"],
+  content: [
+    "./public/**/*.{html,js}",
+    "./src/**/*.{html,js,jsx,ts,tsx}"
+  ],
     theme: {
       extend: {
         colors: {
-          cream: '#FFFAF8',
-          peach: '#FFC3AC',
-          searchBg: '#E8E3ED'
-        },
+          'peach': {
+            '100': '#fffaf8',
+            '200': '#ffe8df',
+            '300': '#ffdcc5',
+            '400': '#ffc3ac',
+          },},
         fontFamily: {
           'inter': ['Inter', 'sans-serif'],
         },
