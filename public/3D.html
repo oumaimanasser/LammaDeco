@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Décorez votre salle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-customPink">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0 gap-x-20">
+            <img src="./images/log.png" alt="Logo" class="h-8">
+            <a href="acceuil.html" class="text-gray-700 ">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 ">A propos</a>
+            <a href="#" class="text-gray-700 ">Contact</a>
+        </div>
+        <ul class="flex space-x-2">
+            <li><a href="login.html"><img src="./images/profil.png" alt="profile" class="h-4"></a></li>
+            <li><img src="./images/achat.png" alt="panier" class="h-4"></li>
+            <li><img src="./images/like.png" alt="favoris" class="h-4"></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="p-8">
+        <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">Décorez votre salle</h1>
+
+        <!-- Image 2D avec texte "prix = 200dnr" et bouton "Détails" -->
+        <div class="flex justify-center mb-8 relative">
+            <!-- Conteneur pour le texte et le bouton -->
+            <div class="absolute top-4 left-50 md:left-50 flex justify-between items-center space-x-4">
+                <!-- Texte "prix = 200dnr" -->
+                <h3 class="text-lg md:text-xl text-gray-600">prix = 200dnr</h3>
+                <!-- Bouton "Détails" avec la couleur personnalisée -->
+                <button class="bg-custom  top-1 text-white px-1 py-1 rounded-lg hover:bg-custom">Détails</button>
+            </div>
+
+            <!-- Image de l'espace avec fond personnalisé -->
+            <div class="bg-custom p-4 rounded-lg shadow-md">
+                <img src="/images/3D.jpg">
+            </div>
+        </div>
+
+        <!-- Liste des éléments de décoration -->
+        <div class="p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">Éléments de décoration</h2>
+
+            <!-- Barre de recherche pour les éléments -->
+            <div class="flex justify-center mb-6">
+                <input type="text" placeholder="Rechercher un élément..." class="px-4 py-2 w-full md:w-96 border rounded-l-full bg-gray-100 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+            </div>
+
+            <!-- Conteneur pour les boutons de navigation et les éléments -->
+            <div class="flex items-center justify-center space-x-4">
+                <!-- Bouton de navigation "<" avec la couleur personnalisée -->
+                <button class=" text-black px-3 py-2 rounded-full "><</button>
+
+                <!-- Conteneur des éléments -->
+                <div class="flex space-x-4">
+                    <!-- Élément 1 : Fleurs -->
+                    <div class="text-center">
+                        <img src="./images/tabfl.jpg" alt="fleur" class="w-16 h-16 rounded-lg mx-auto">
+                        <p class="text-sm text-gray-600 mt-2">30dt</p>
+                    </div>
+                    <!-- Élément 2 : Bougies -->
+                    <div class="text-center">
+                        <img src="./images/bougie.webp" alt="bougie" class="w-16 h-16 rounded-lg mx-auto">
+                        <p class="text-sm text-gray-600 mt-2">30dt</p>
+                    </div>
+                    <!-- Élément 3 : Ballons -->
+                    <div class="text-center">
+                        <img src="./images/balon.jpg" alt="balon" class="w-16 h-16 rounded-md mx-auto">
+                        <p class="text-sm text-gray-600 mt-2">30dt</p>
+                    </div>
+                    <!-- Élément 4 : Tables -->
+                    <div class="text-center">
+                        <img src="./images/fleur.jpg" alt="table" class="w-16 h-16 rounded-lg mx-auto">
+                        <p class="text-sm text-gray-600 mt-2">30dt</p>
+                    </div>
+                </div>
+
+                <!-- Bouton de navigation ">" avec la couleur personnalisée -->
+                <button class=" text-black px-3 py-2 rounded-full ">></button>
+            </div>
+        </div>
+        
+        <!-- Boutons de confirmation et précédent avec la couleur personnalisée -->
+        <div class="flex justify-around mt-8 w-full">
+            <a href="int2.html">
+            <button class="bg-custom text-white px-4 py-2  mb-4  rounded-md hover:bg-custom">Précédent</button></a>
+            <button class="bg-custom text-white px-4 py-2 mb-4 rounded-md hover:bg-custom">Confirmer</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-custom mt-16 py-10 text-center text-gray-700">
+        <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
+            <div>
+                <h3 class="font-semibold">Information</h3>
+                <p>Qui nous sommes?</p>
+                <p>Avis client</p>
+                <p>Type d'événements</p>
+                <p>Livraison</p>
+                <p>Réduction</p>
+                <p>Paiement</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Contact</h3>
+                <p>lamaDeco@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Suivez-nous</h3>
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📸</a> <!-- Instagram -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📱</a> <!-- WhatsApp -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">👤</a> <!-- Facebook -->
+                </div>
+                <p class="mt-2">📞 +216 64 793 993</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

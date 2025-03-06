@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./style.css" rel="stylesheet">
+    <style>
+        .banner {
+  background: url('banner.jpg') no-repeat center/cover;
+  height: 400px;
+  display: flex; /* Replace with .flex */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Replace with .text-center */
+  color: white;
+  position: relative;
+}
+
+/* Conteneur de l’image sous le bouton */
+.banner-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Replace with .object-cover */
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Replace with .text-center */
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.banner-text h4 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 0.8rem 2.5rem;
+  background-color: #ff7f7f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #ff5252;
+}
+
+.login-container {
+  text-align: center; /* Replace with .text-center */
+  padding: 50px;
+}
+
+form {
+  display: flex; /* Replace with .flex */
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  background-color: #FFB69F;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: #FFD5C2;
+}
+
+    </style>
+</head>
+<body class="bg-customPink">
+    <!-- En-tête -->
+    <nav class="shadow-md p-4 md:p-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0 gap-x-4 md:gap-x-20">
+            <img src="./images/log.png" alt="Logo" class="h-8">
+            <a href="acceuil.html" class="text-gray-700">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 ">A propos</a>
+            <a href="#" class="text-gray-700 ">Contact</a>
+        </div>
+        <ul class="flex space-x-2">
+            <li><a href="login.html"><img src="./images/profil.png" alt="profile" class="h-4"></a></li>
+            <li><img src="./images/achat.png" alt="panier" class="h-4"></li>
+            <li><img src="./images/like.png" alt="favoris" class="h-4"></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+
+    <!-- Section de recherche -->
+    <section class="banner">
+        <div class="banner-image">
+            <img src="/images/acceuil.png" alt="Décoration d'événement">
+        </div>
+    </section>
+        
+        <section class="login-container">
+            <h2>Connexion</h2>
+            <form>
+                <input type="email" placeholder="Taper votre mail" required>
+                <input type="password" placeholder="Taper votre mot de passe" required>
+                <button type="submit" class="btn">Connexion</button>
+                <br>
+                <button type="button" class="btn cancel">Annuler</button>
+            </form>
+        </section>
+    </div>
+    <!-- Pied de page -->
+    <footer class="bg-custom mt-16 py-10 text-center text-gray-700">
+        <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
+            <div>
+                <h3 class="font-semibold">Information</h3>
+                <p>Qui nous sommes?</p>
+                <p>Avis client</p>
+                <p>Type d'événements</p>
+                <p>Livraison</p>
+                <p>Réduction</p>
+                <p>Paiement</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Contact</h3>
+                <p>lamaDeco@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Suivez-nous</h3>
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📸</a> <!-- Instagram -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📱</a> <!-- WhatsApp -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">👤</a> <!-- Facebook -->
+                </div>
+                <p class="mt-2">📞 +216 64 793 993</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

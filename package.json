@@ -1,0 +1,16 @@
+{
+  "name": "photography-website",
+  "version": "1.0.0",
+  "description": "Site de photographie de mariage",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/style.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./public/style.css --watch"
+  },
+  "keywords": ["photography", "tailwind", "css"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0"
+  }
+} 
