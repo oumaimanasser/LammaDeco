@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographie de Mariage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Navbar */
+header nav {
+  display: flex; /* Replace with .flex */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #FFFAF8; /* Replace with .bg-cream */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .menu-center, nav .menu-right {
+  display: flex; /* Replace with .flex */
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #ff7f7f;
+}
+
+.logo img {
+  height: 70px;
+  border-radius: 50%;
+}
+
+.menu-right img {
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Bannière */
+.banner-image {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Replace with .object-cover */
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Replace with .text-center */
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.banner-text h4 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 0.8rem 2.5rem;
+  background-color: #ff7f7f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #ff5252;
+}
+
+/* Packs */
+.packs h2 {
+  text-align: center; /* Replace with .text-center */
+  margin: 2rem 0;
+}
+
+.carousel-container {
+  display: flex; /* Replace with .flex */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container .prev, .carousel-container .next {
+  color: black;
+  border: none;
+  padding: 30px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+}
+
+.carousel {
+  display: flex; /* Replace with .flex */
+  gap: 2rem;
+}
+
+.card {
+  background: white; /* Replace with .bg-white */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Replace with .text-center */
+  width: 280px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff7f7f;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.rating {
+  margin-bottom: 0.5rem;
+  color: #ffdf00;
+  font-size: 1.2rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Services */
+.info-container {
+  display: flex; /* Replace with .flex */
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: #fff; /* Replace with .bg-white */
+  text-align: center; /* Replace with .text-center */
+  gap: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.info-card {
+  display: flex; /* Replace with .flex */
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.info-card svg {
+  width: 70px;
+  height: 70px;
+  fill: #5f6368;
+}
+
+.info-card h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.button-container {
+  display: flex; /* Replace with .flex */
+  justify-content: flex-start; /* Align to the left */
+  margin-bottom: 2rem;
+  padding-left: 16rem;
+}
+
+.precedent-btn {
+  background-color: #ffb3b3;
+  color: black;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+    </style>
+</head>
+<body class="bg-cream font-inter">
+    <!-- En-tête -->
+    <header class="flex justify-between items-center px-4 sm:px-6 md:px-10 py-4">
+        <!-- Espace vide à gauche -->
+        <div class="text-gray-400 text-sm hidden md:block"></div>
+
+        <!-- Logo et navigation -->
+        <div class="flex items-center gap-4 sm:gap-6 md:gap-10">
+            <div class="logo flex items-center">
+                <img src="/images/logo.png" alt="Logo" class="w-10 h-10 md:w-15 md:h-15 rounded-full mr-2">
+            </div>
+            <nav class="hidden sm:block">
+                <ul class="flex gap-4 md:gap-8">
+                    <li><a href="LammaDeco-nadra/validation" class="text-black font-medium">Accueil</a></li>
+                    <li><a href="#" class="text-black font-medium">À propos</a></li>
+                    <li><a href="#" class="text-black font-medium">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="block sm:hidden text-black">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Icônes à droite -->
+        <div class="text-gray-400 text-sm hidden md:block">
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-black"><i class="far fa-clock"></i></a>
+                <a href="#" class="text-black"><i class="far fa-thumbs-up"></i></a>
+                <a href="#" class="text-black"><i class="far fa-heart"></i></a>
+            </div>
+        </div>
+    </header>
+    <!-- Section de recherche -->
+    <section class="banner">
+        <div class="banner-image">
+            <img src="/images/acceuil.png" alt="Décoration d'événement">
+            <div class="banner-text">
+                <h4>Organisez vos événements en toute simplicité !</h4>
+                <button class="btn">Découvrir</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packs -->
+    <section class="packs">
+        <h2>Découvrez nos packs</h2>
+        <div class="carousel-container">
+            <button class="prev">&#10094;</button>
+            <div class="carousel">
+                <div class="card">
+                    <img src="/images/pack1.jpg" alt="Un anniversaire joyeux">
+                    <p class="price">900dnr</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                    <p class="description">Un anniversaire joyeux</p>
+                </div>
+                <div class="card">
+                    <img src="/images/pack2.jpg" alt="Un mariage élégant">
+                    <p class="price">3500dnr</p>
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+                    <p class="description">Un mariage élégant</p>
+                </div>
+                <div class="card">
+                    <img src="/images/pack3.jpg" alt="Un mariage simple">
+                    <p class="price">1500dnr</p>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                    <p class="description">Un mariage simple</p>
+                </div>
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="info-container">
+            <div class="info-card">
+                <svg class="fas fa-shipping-fast" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-160q-50 0-85-35t-35-85H40v-440q0-33 23.5-56.5T120-800h560v160h120l120 160v200h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T280-280q0-17-11.5-28.5T240-320q-17 0-28.5 11.5T200-280q0 17 11.5 28.5T240-240ZM120-360h32q17-18 39-29t49-11q27 0 49 11t39 29h272v-360H120v360Zm600 120q17 0 28.5-11.5T760-280q0-17-11.5-28.5T720-320q-17 0-28.5 11.5T680-280q0 17 11.5 28.5T720-240Zm-40-200h170l-90-120h-80v120ZM360-540Z"/></svg>
+                <div class="text">
+                    <h3>Livraison 24/24h</h3>
+                    <p>Pour toute commande de produits</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <svg class="fas fa-undo" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
+                <div class="text">
+                    <h3>Retours faciles</h3>
+                    <p>Garantie de conformité ou droit de rétractation</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <svg class="fas fa-credit-card" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M560-440q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35ZM280-320q-33 0-56.5-23.5T200-400v-320q0-33 23.5-56.5T280-800h560q33 0 56.5 23.5T920-720v320q0 33-23.5 56.5T840-320H280Zm80-80h400q0-33 23.5-56.5T840-480v-160q-33 0-56.5-23.5T760-720H360q0 33-23.5 56.5T280-640v160q33 0 56.5 23.5T360-400Zm440 240H120q-33 0-56.5-23.5T40-240v-440h80v440h680v80ZM280-400v-320 320Z"/></svg>
+                <div class="text">
+                    <h3>Paiements sécurisés</h3>
+                    <p>Par carte bancaire</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="button-container">
+        <button class="precedent-btn">Précédent</button>
+    </div>
+    <!-- Pied de page -->
+    <footer class="bg-peach px-4 sm:px-6 md:px-10 py-5 mt-8">
+        <div class="flex flex-col md:flex-row justify-between gap-6">
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">Information</h3>
+                <nav>
+                    <ul>
+                        <li class="my-1 text-sm">Qui sommes nous?</li>
+                        <li class="my-1 text-sm">Avis client</li>
+                        <li class="my-1 text-sm">Type d'événements </li>
+                        <li class="my-1 text-sm">Livraison</li>
+                        <li class="my-1 text-sm">Réduction</li>
+                        <li class="my-1 text-sm">Paiement</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">Contact</h3>
+                
+                <div></div>
+                <h3 class="mb-2 mt-2 font-semibold">Suivez-nous</h3>
+                <div class="social-icons flex mt-2">
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </section>
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">lamaDeco@gmail.com</h3>
+                <address class="not-italic">
+                    <p class="my-1 text-sm">+216 64 793 993</p>
+                </address>
+            </section>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
