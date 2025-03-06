@@ -1,0 +1,261 @@
+
+/* Variables CSS */
+:root {
+    --color-primary: #ffffff;
+    --color-primary-dark: #e3a8b0;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-accent: #e6556e;
+    --radius: 0.5rem;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset et base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Composants */
+.card {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    background-color: var(--color-primary);
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--color-accent);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+/* Facture */
+.invoice-header {
+    margin-bottom: 2rem;
+}
+
+.invoice-header h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+}
+
+.invoice-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.meta-item p:first-child {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th {
+    text-align: left;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    text-align: center;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    text-align: right;
+}
+
+tfoot td {
+    padding: 0.5rem;
+}
+
+tfoot tr:last-child td {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+/* QR Code */
+.qr-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.qr-section p {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 0.5rem;
+}
+
+.download-text {
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline {
+    background: none;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Footer */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+}
+
+.footer-section li:hover {
+    color: var(--color-accent);
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    color: var(--color-text);
+}
+
+.social-icons a:hover {
+    color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .invoice-meta, .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

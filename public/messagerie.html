@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fgm.css" rel="stylesheet">
+    <link href="messagerie.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="h-full flex flex-col">
+    <main class="flex-1">
+    
+    <!-- Navbar Responsive -->
+    <nav class="shadow-md p-4 md:p-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0 gap-x-4 md:gap-x-20">
+            <img src="./images/logo.png" alt="Logo" class="h-8">
+            <a href="acceuil.html" class="text-gray-700">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 ">A propos</a>
+            <a href="messagerie.html" class="text-gray-700 ">Contact</a>
+        </div>
+        <ul class="flex space-x-2">
+            <li><img src="./images/profil.png" alt="profile" class="h-4"></li>
+            <li><img src="./images/achat.png" alt="panier" class="h-4"></li>
+            <li><img src="./images/like.png" alt="favoris" class="h-4"></li>
+        </ul>
+    </nav>
+        
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-peach-200 p-4 flex items-center">
+                <button class="mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-gray-300 mr-3"></div>
+                    <span class="font-medium">Demande de mariage</span>
+                </div>
+                <div class="ml-auto flex">
+                    <button class="mx-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </button>
+                    <button class="mx-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="relative h-96 overflow-y-auto">
+                <img src="./images/5.jpeg" alt="Wedding decoration with balloons" class="w-full h-full object-cover" />
+                
+                <div class="absolute top-4 left-4 max-w-xs">
+                    <div class="bg-gray-100 rounded-lg px-3 py-1 mb-2 text-sm">
+                        Je veux balloon bleu
+                    </div>
+                </div>
+                
+                <div class="absolute bottom-32 left-4 max-w-xs">
+                    <div class="bg-gray-100 rounded-lg px-3 py-1 mb-2 text-sm">
+                        Je pense comme ça!
+                    </div>
+                </div>
+                
+                <div class="absolute bottom-1/3 right-4 text-4xl font-script text-peach-400">
+                    Forever
+                </div>
+            </div>
+            <div class="p-2 bg-peach-200 flex items-center">
+                <button class="p-2">
+                    <a href="galerie.html" class="p-2 inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </a>
+                    
+                </button>
+                <input type="text" placeholder="Écrivez..." class="flex-1 mx-2 p-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-peach-300" />
+                <button class="p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+     <!-- Pied de page -->
+     <footer class="bg-peach px-4 sm:px-6 md:px-10 py-5 mt-8">
+        <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
+            <div>
+                <h3 class="font-semibold">Information</h3>
+                <p>Qui nous sommes?</p>
+                <p>Avis client</p>
+                <p>Type d'événements</p>
+                <p>Livraison</p>
+                <p>Réduction</p>
+                <p>Paiement</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Contact</h3>
+                <p>lamaDeco@gmail.com</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Suivez-nous</h3>
+                <div class="flex space-x-4 justify-center">
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📸</a> <!-- Instagram -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">📱</a> <!-- WhatsApp -->
+                    <a href="#" class="text-gray-700 hover:text-pink-500">👤</a> <!-- Facebook -->
+                </div>
+                <p class="mt-2">📞 +216 64 793 993</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

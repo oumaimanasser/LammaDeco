@@ -1,0 +1,27 @@
+/* Basic Footer styling */
+footer {
+    background-color: #ffffff; /* Dark background color */
+    color: #040404; /* White text */
+    padding: 20px 0; /* Padding for spacing */
+    text-align: center; /* Center the text */
+    position: relative; /* Allow absolute positioning inside */
+  }
+  
+  /* Fix Footer to the bottom */
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main content area (to take available space) */
+  main {
+    flex: 1;
+  }
+  
+  /* Sticky Footer */
+  footer {
+    margin-top: auto;
+  }
+  
