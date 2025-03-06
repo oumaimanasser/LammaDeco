@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographie de Mariage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="proje1.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-customPink">
+    
+    <!-- Navbar Responsive -->
+    <nav class="shadow-md p-4 md:p-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0 gap-x-4 md:gap-x-20">
+            <img src="./images/logo.png" alt="Logo" class="h-8">
+            <a href="acceuil.html" class="text-gray-700">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 ">A propos</a>
+            <a href="messagerie.html" class="text-gray-700 ">Contact</a>
+        </div>
+        <ul class="flex space-x-2">
+            <li><img src="./images/profil.png" alt="profile" class="h-4"></li>
+            <li><img src="./images/achat.png" alt="panier" class="h-4"></li>
+            <li><img src="./images/like.png" alt="favoris" class="h-4"></li>
+        </ul>
+    </nav>
+    <!-- Contenu principal -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 md:px-5 py-5">
+        <section class="catalog-section">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-5 gap-3">
+                <h2 class="font-semibold text-xl sm:text-2xl">Catalogues</h2>
+                <div class="relative w-full sm:w-auto">
+                    <button id="sort-button" class="bg-white border border-gray-300 px-4 py-2 rounded-full cursor-pointer font-inter w-full sm:w-auto text-sm sm:text-base">Trier par</button>
+                    <div class="hidden absolute right-0 bg-white min-w-40 shadow-lg z-10 rounded-lg" id="dropdown">
+                        <a href="#" onclick="filterCatalogs('all')" class="block px-4 py-3 text-sm hover:bg-gray-100">Tous</a>
+                        <a href="#" onclick="filterCatalogs('mariage')" class="block px-4 py-3 text-sm hover:bg-gray-100">Mariage</a>
+                        <a href="#" onclick="filterCatalogs('anniversaire')" class="block px-4 py-3 text-sm hover:bg-gray-100">Anniversaire</a>
+                        <a href="#" onclick="filterCatalogs('autre-fete')" class="block px-4 py-3 text-sm hover:bg-gray-100">Autre fête</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grille des catalogues -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                <!-- Catalogue 1 -->
+                <article class="relative overflow-hidden rounded-lg autre-fete" data-category="autre-fete">
+                    <img src="/images/catalogue1.jpg" alt="Catalogue 1" class="w-full h-full object-cover">
+                    <div class="text-black font-medium text-center mt-2">catalogue 1</div>
+                </article>
+            
+                <!-- Catalogue 2 -->
+                <article class="relative overflow-hidden rounded-lg mariage" data-category="mariage">
+                    <img src="/images/catalogue2.jpg" alt="Catalogue 2" class="w-full h-full object-cover">
+                    <div class="text-black font-medium text-center mt-2">catalogue 2</div>
+                </article>
+            
+                <!-- Catalogue 3 -->
+                <article class="relative overflow-hidden rounded-lg anniversaire" data-category="anniversaire">
+                    <img src="/images/catalogue3.jpg" alt="Catalogue 3" class="w-full h-full object-cover">
+                    <div class="text-black font-medium text-center mt-2">catalogue 3</div>
+                </article>
+            
+                <!-- Catalogue 4 -->
+                <article class="relative overflow-hidden rounded-lg anniversaire" data-category="anniversaire">
+                    <img src="/images/catalogue4.jpg" alt="Catalogue 4" class="w-full h-full object-cover">
+                    <div class="text-black font-medium text-center mt-2">catalogue 4</div>
+                </article>
+            
+                <!-- Catalogue 5 -->
+                <article class="relative overflow-hidden rounded-lg mariage" data-category="mariage">
+                    <img src="/images/catalogue5.jpg" alt="Catalogue 5" class="w-full h-full object-cover">
+                    <div class="text-black font-medium text-center mt-2">catalogue 5</div>
+                </article>
+            
+                <!-- Catalogue 6 -->
+                <article class="relative overflow-hidden rounded-lg autre-fete" data-category="autre-fete">
+                    <img src="/images/catalogue6.jpg" alt="Catalogue 6" class="w-full h-full object-cover">
+                    <div class="text-black font-medium text-center mt-2">catalogue 6</div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-peach px-4 sm:px-6 md:px-10 py-5 mt-8">
+        <div class="flex flex-col md:flex-row justify-between gap-6">
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">Information</h3>
+                <nav>
+                    <ul>
+                        <li class="my-1 text-sm">Qui sommes nous?</li>
+                        <li class="my-1 text-sm">Avis client</li>
+                        <li class="my-1 text-sm">Type d'événements </li>
+                        <li class="my-1 text-sm">Livraison</li>
+                        <li class="my-1 text-sm">Réduction</li>
+                        <li class="my-1 text-sm">Paiement</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">Contact</h3>
+                
+                <div></div>
+                <h3 class="mb-2 mt-2 font-semibold">Suivez-nous</h3>
+                <div class="social-icons flex mt-2">
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mr-4 text-black"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </section>
+            <section class="flex-1">
+                <h3 class="mb-2 font-semibold">lamaDeco@gmail.com</h3>
+                <address class="not-italic">
+                    <p class="my-1 text-sm">+216 64 793 993</p>
+                </address>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Font Awesome pour les icônes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <script>
+
+
+        // Toggle dropdown visibility
+        document.getElementById('sort-button').addEventListener('click', function(event) {
+    event.stopPropagation(); // Empêche la fermeture immédiate
+    document.getElementById('dropdown').classList.toggle('hidden');
+        });
+
+
+        // Toggle mobile menu
+        document.querySelector('button.block.sm\\:hidden').addEventListener('click', function() {
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'fixed inset-0 bg-white z-50 flex flex-col items-center justify-center';
+            mobileMenu.innerHTML = `
+                <button class="absolute top-4 right-4 text-black text-xl">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav>
+                    <ul class="flex flex-col gap-6 text-center">
+                        <li><a href="#" class="text-black font-medium text-xl">Accueil</a></li>
+                        <li><a href="#" class="text-black font-medium text-xl">À propos</a></li>
+                        <li><a href="#" class="text-black font-medium text-xl">Contact</a></li>
+                    </ul>
+                </nav>
+            `;
+            document.body.appendChild(mobileMenu);
+            document.body.style.overflow = 'hidden';
+            
+            mobileMenu.querySelector('button').addEventListener('click', function() {
+                document.body.removeChild(mobileMenu);
+                document.body.style.overflow = '';
+            });
+        });
+
+        function filterCatalogs(category) {
+            const catalogs = document.querySelectorAll('[data-category]');
+            
+            catalogs.forEach(catalog => {
+                if (category === 'all') {
+                    catalog.classList.remove('hidden');
+                } else {
+                    if (catalog.dataset.category === category) {
+                        catalog.classList.remove('hidden');
+                    } else {
+                        catalog.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        document.addEventListener("click", function(event) {
+    const sortButton = document.getElementById("sort-button");
+    const dropdown = document.getElementById("dropdown");
+
+    if (!sortButton.contains(event.target) && !dropdown.contains(event.target)) {
+        dropdown.classList.add("hidden");
+    }
+});
+    </script>
+</body>
+</html>

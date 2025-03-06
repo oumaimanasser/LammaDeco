@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Planner - Facture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="facture.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-customPink">
+    
+    <!-- Navbar Responsive -->
+    <nav class="shadow-md p-4 md:p-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0 gap-x-4 md:gap-x-20">
+            <img src="./images/logo.png" alt="Logo" class="h-8">
+            <a href="acceuil.html" class="text-gray-700">Accueil</a>
+            <a href="apropos.html" class="text-gray-700 ">A propos</a>
+            <a href="messagerie.html" class="text-gray-700 ">Contact</a>
+        </div>
+        <ul class="flex space-x-2">
+            <li><img src="./images/profil.png" alt="profile" class="h-4"></li>
+            <li><img src="./images/achat.png" alt="panier" class="h-4"></li>
+            <li><img src="./images/like.png" alt="favoris" class="h-4"></li>
+        </ul>
+    </nav>
+    <main class="p-8">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="nav">
+                </div>
+                <div class="nav-icons">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </button>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <div class="invoice-header">
+                    <h1>FACTURE</h1>
+                    <div class="invoice-meta">
+                        <div class="meta-item">
+                            <p>Référence</p>
+                            <p>12345</p>
+                        </div>
+                        <div class="meta-item">
+                            <p>Date</p>
+                            <p>12/12/2024</p>
+                        </div>
+                        <div class="meta-item">
+                            <p>Client</p>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="meta-item">
+                            <p>Total</p>
+                            <p>794 DT</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Qté</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fleurs</td>
+                            <td>12</td>
+                            <td>350 DT</td>
+                        </tr>
+                        <tr>
+                            <td>Chaises</td>
+                            <td>12</td>
+                            <td>360 DT</td>
+                        </tr>
+                        <tr>
+                            <td>Fleurs</td>
+                            <td>10</td>
+                            <td>84 DT</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="text-right">Total HT</td>
+                            <td>620 DT</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-right">Acompte 30%</td>
+                            <td>186 DT</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-right">Reste dû</td>
+                            <td>794 DT</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                
+                <div class="qr-section">
+                    <p>Vous pouvez payer en ligne en scannant ce code</p>
+                    <div class="qr-code">
+                        <!-- QR Code SVG pour télécharger la facture -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29">
+                            <path d="M1,1h7v7h-7z M3,3v3h3v-3z M10,1h1v1h-1z M12,1h3v1h1v1h1v-1h1v-1h1v2h-1v1h-1v-1h-1v-1h-1v2h-1v-1h-1v-1h-1z M19,1h1v1h-1z M21,1h7v7h-7z M23,3v3h3v-3z M9,2h1v1h-1z M12,2h1v1h-1z M19,2h1v2h-2v-1h1z M2,3h1v1h-1z M8,3h1v1h-1z M22,3h1v1h-1z M28,3h1v1h-1z M2,4h3v3h-3z M22,4h3v3h-3z M12,5h1v1h-1z M18,5h1v1h-1z M3,5h1v1h-1z M5,5h1v1h-1z M23,5h1v1h-1z M25,5h1v1h-1z M10,6h1v1h-1z M14,6h1v1h-1z M20,6h1v1h-1z M9,7h1v4h-1z M12,7h1v1h-1z M16,7h1v1h-1z M19,7h1v1h-1z M1,9h1v1h-1z M3,9h2v1h-2z M6,9h2v1h-2z M10,9h2v1h-2z M13,9h1v3h1v-2h1v1h1v1h1v-1h1v-1h1v1h2v1h-2v1h-1v-1h-1v1h-1v-1h-3v1h1v1h-1v1h1v1h-1v-1h-1v1h2v1h-3v-3h-1v1h-1v-1h-1v-1h1v-1h-1v-1h1v-1h-1v-1h1z M17,9h2v1h-2z M20,9h2v1h-2z M24,9h1v1h-1z M26,9h2v1h-2z M4,10h1v1h-1z M8,10h1v1h-1z M15,10h1v1h-1z M18,10h1v1h-1z M22,10h2v1h-2z M25,10h1v1h-1z M27,10h1v2h-1v1h-1v-1h-1v-1h2z M2,11h2v1h-2z M7,11h2v1h-2z M19,11h1v1h-1z M1,12h1v1h-1z M4,12h1v1h-1z M6,12h1v1h-1z M8,12h1v1h-1z M16,12h1v1h-1z M21,12h1v1h-1z M25,12h3v1h-3z M3,13h1v1h-1z M5,13h1v1h-1z M7,13h1v1h-1z M10,13h1v1h-1z M18,13h1v1h-1z M20,13h1v1h-1z M22,13h1v1h-1z M24,13h1v1h-1z M26,13h1v1h-1z M2,14h1v1h-1z M4,14h1v1h-1z M6,14h1v1h-1z M8,14h1v1h-1z M19,14h1v2h-1z M21,14h1v1h-1z M23,14h1v1h-1z M25,14h1v3h-1v1h-1v-1h-1v-1h-2v1h1v1h-2v-1h-1v-3h1v-1h1v1h1v1h-1v1h2v-1h1v-1h1z M27,14h1v2h-1z M1,15h1v1h-1z M9,15h2v1h-2z M13,15h2v1h-2z M21,15h2v1h-2z M1,17h7v7h-7z M9,17h2v1h-2z M12,17h1v1h1v1h-2z M15,17h1v1h-1z M19,17h1v1h1v1h-1v1h-1v-1h-1v-1h1z M21,17h2v1h-2z M27,17h1v1h-1z M3,19v3h3v-3z M9,19h1v1h-1z M11,19h3v1h-3z M15,19h1v1h-1z M23,19h1v1h-1z M25,19h1v2h-1z M27,19h1v1h-1z M2,19h1v1h-1z M8,19h1v1h-1z M10,20h1v2h-1z M14,20h1v1h1v1h-1v2h-1v1h1v1h-2v-3h-1v-1h2z M16,20h1v1h-1z M18,20h1v3h-1z M20,20h1v1h1v1h-3v-1h1z M23,20h1v1h-1z M8,21h1v1h-1z M11,21h1v1h-1z M16,21h1v1h-1z M24,21h1v1h-1z M27,21h1v1h-1z M8,22h1v1h-1z M13,22h1v1h-1z M19,22h1v1h-1z M24,22h1v1h-1z M27,22h1v1h-1z M8,23h2v1h-2z M11,23h1v1h-1z M15,23h1v1h-1z M17,23h1v2h-1z M20,23h1v1h-1z M22,23h1v1h-1z M25,23h1v1h-1z M9,24h1v1h-1z M11,24h1v1h-1z M13,24h1v1h-1z M16,24h1v1h-1z M19,24h1v1h-1z M21,24h3v1h-3z M27,24h1v1h-1z M9,25h1v1h-1z M12,25h1v1h1v1h-1v1h2v-1h1v-2h-1v-1h-1v1h-2z M20,25h1v1h-1z M23,25h2v1h-2z M26,25h1v1h-1z M9,26h1v1h1v1h-1v1h-1z M17,26h1v1h-1z M22,26h1v2h-1z M24,26h2v1h1v1h-4v-1h1z M13,27h1v1h-1z M16,27h1v1h-1z M19,27h2v1h-2z"/>
+                        </svg>
+                    </div>
+                    <p class="download-text">Télécharger votre facture</p>
+                </div>
+                
+                <div class="btn-group">
+                    <button class="btn btn-secondary">Annuler</button>
+                    <button class="btn btn-secondary">Confirmer</button>
+                </div>
+                
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <button class="btn btn-outline">Envoi par email</button>
+                </div>
+            </div>
+        </main>
+            <footer class="bg-custom mt-16 py-10 text-center text-gray-700">
+                <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
+                    <div>
+                        <h3 class="font-semibold">Information</h3>
+                        <p>Qui nous sommes?</p>
+                        <p>Avis client</p>
+                        <p>Type d'événements</p>
+                        <p>Livraison</p>
+                        <p>Réduction</p>
+                        <p>Paiement</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Contact</h3>
+                        <p>lamaDeco@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Suivez-nous</h3>
+                        <div class="flex space-x-4 justify-center">
+                            <a href="#" class="text-gray-700 hover:text-pink-500">📸</a> <!-- Instagram -->
+                            <a href="#" class="text-gray-700 hover:text-pink-500">📱</a> <!-- WhatsApp -->
+                            <a href="#" class="text-gray-700 hover:text-pink-500">👤</a> <!-- Facebook -->
+                        </div>
+                        <p class="mt-2">📞 +216 64 793 993</p>
+                    </div>
+                </div>
+            </footer>
+</body>
+</html>
