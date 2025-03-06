@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-white font-sans">
+
+<!-- Header -->
+<header class="bg-white shadow py-3 px-6 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="logo">
+        <img src="assets/462540634_1328870281412639_4986394337851813578_n.png" alt="Logo" class="w-11 h-11 rounded-full">
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="flex space-x-12">
+            <li><a href="#" class="text-gray-800 font-medium hover:text-pink-500 border-b-2 border-pink-200">Accueil</a></li>
+            <li><a href="#" class="text-gray-800 font-medium hover:text-pink-500">A propos</a></li>
+            <li><a href="#" class="text-gray-800 font-medium hover:text-pink-500">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- User Actions -->
+    <div class="flex space-x-5">
+        <a href="#">
+            <img src="./assets/profil.png" alt="profile" class="w-6 h-6 hover:opacity-75">
+        </a>
+        <a href="index2.html">
+            <img src="./assets/like.png" alt="Icône Panier" class="w-6 h-6 hover:opacity-75">
+        </a>
+
+        <a href="#">
+            <img src="./assets/achat.png" alt="Icône Panier" class="w-6 h-6 hover:opacity-75">
+        </a>
+
+    </div>
+</header>
+
+<!-- Search Bar -->
+<div class="text-center mt-10">
+
+    <div class="mt-4 flex justify-center">
+        <input type="text" placeholder="Saisir recherche" class="px-4 py-2 w-96 border rounded-full bg-gray-100 shadow-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+    </div>
+</div>
+
+
+<!-- Product Vertical Display -->
+<div class="container mx-auto py-8 px-4">
+    <div class="flex flex-col space-y-6">
+
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex flex-col md:flex-row md:space-x-6">
+                <img src="assets/17104905965366eb675e35c25e12b390af65415648_thumbnail_720x.jpg" alt="Set de table" class="w-full md:w-48 h-48 object-cover rounded-lg">
+                <div class="mt-4 md:mt-0">
+                    <h3 class="text-gray-800 text-base font-normal mb-2">set de table avec serviette et couverts</h3>
+                    <div class="text-gray-800 text-lg font-bold mb-4">80DT</div>
+                    <div class="flex items-center space-x-6 bg-pink-50 px-4 py-2 rounded-full w-fit">
+                        <button class="w-6 h-6 rounded-full border border-pink-300 text-pink-300 flex items-center justify-center">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="text-gray-800 text-lg font-bold min-w-[20px] text-center">1</span>
+                        <button class="w-6 h-6 rounded-full border border-pink-300 text-pink-300 flex items-center justify-center">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex flex-col md:flex-row md:space-x-6">
+                <img src="assets/8360db1092e8fac06b6662469cdd61aa.jpg" alt="Wedding Floral Arrangement" class="w-full md:w-48 h-48 object-cover rounded-lg">
+                <div class="mt-4 md:mt-0">
+                    <h3 class="text-gray-800 text-base font-normal mb-2">fleurs</h3>
+                    <div class="text-gray-800 text-lg font-bold mb-4">80DT</div>
+                    <div class="flex items-center space-x-6 bg-pink-50 px-4 py-2 rounded-full w-fit">
+                        <button class="w-6 h-6 rounded-full border border-pink-300 text-pink-300 flex items-center justify-center">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="text-gray-800 text-lg font-bold min-w-[20px] text-center">1</span>
+                        <button class="w-6 h-6 rounded-full border border-pink-300 text-pink-300 flex items-center justify-center">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex flex-col md:flex-row md:space-x-6">
+                <img src="assets/wedding-flower-arch-styles-design-template-7c81022f920b5206308bcc378bc55b8c_screen.jpg" alt="Wedding Arch" class="w-full md:w-48 h-48 object-cover rounded-lg">
+                <div class="mt-4 md:mt-0">
+                    <h3 class="text-gray-800 text-base font-normal mb-2">Arche florale décorée de collage</h3>
+                    <div class="text-gray-800 text-lg font-bold mb-4">80DT</div>
+                    <div class="flex items-center space-x-6 bg-pink-50 px-4 py-2 rounded-full w-fit">
+                        <button class="w-6 h-6 rounded-full border border-pink-300 text-pink-300 flex items-center justify-center">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="text-gray-800 text-lg font-bold min-w-[20px] text-center">1</span>
+                        <button class="w-6 h-6 rounded-full border border-pink-300 text-pink-300 flex items-center justify-center">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Pagination -->
+<div class="container mx-auto flex flex-col items-center gap-4 my-8">
+    <div class="flex items-center space-x-6">
+        <button class="text-gray-800 text-3xl opacity-70"><</button>
+        <div class="flex items-center space-x-6">
+            <button class="w-9 h-9 flex items-center justify-center bg-white text-gray-800 text-lg relative">1
+                <span class="absolute bottom-[-5px] left-1/2 -translate-x-1/2 w-full h-2 bg-white rounded-full shadow-md opacity-50"></span>
+            </button>
+            <button class="w-9 h-9 flex items-center justify-center bg-transparent text-gray-800 text-lg">2</button>
+            <button class="w-9 h-9 flex items-center justify-center bg-transparent text-gray-800 text-lg">3</button>
+        </div>
+        <button class="text-gray-800 text-3xl opacity-70">></button>
+    </div>
+    <div class="flex justify-between w-full max-w-2xl mt-6">
+        <button class="bg-pink-100 border-none px-4 py-2 rounded-md text-gray-700 cursor-pointer shadow-md hover:shadow-lg">précédant</button>
+        <button class="bg-pink-100 border-none px-4 py-2 rounded-md text-gray-700 cursor-pointer shadow-md hover:shadow-lg">suivant</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-[#FECDBF] mt-16 py-10 text-center text-gray-700">
+    <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
+        <div>
+            <h3 class="font-semibold">Information</h3>
+            <p>Qui nous sommes?</p>
+            <p>Avis client</p>
+            <p>Type d'événements</p>
+            <p>Livraison</p>
+            <p>Réduction</p>
+            <p>Paiement</p>
+        </div>
+        <div>
+            <h3 class="font-semibold">Contact</h3>
+            <p>lamaDeco@gmail.com</p>
+        </div>
+        <div>
+            <h3 class="font-semibold">Suivez-nous</h3>
+            <div class="footer-section social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
